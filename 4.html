@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="description" content=""/>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+		<link rel="stylesheet" type="text/css" href="css/carousel.css"/>
+		<link rel="stylesheet" type="text/css" href="css/_main.css"/>
+		<link rel="stylesheet/less" type="text/css" href="less/variables.less" />
+		
+		<title>Bootstrappin&#39; Portfolio</title>
+		
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+		<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script><!--首先会判断有没有window.jQuery，即判断是否导入了jquery,如果没有（也就是false）,则运行后面的代码，将jquery引入到项目中。-->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script><!--用于保存幻灯片代码-->
+		<script src="js/bootstrap.min.js"></script>
+		
+	</head>
+	
+	<body>
+		<header role="banner">
+			<nav role="navigation" class="navbar navbar-static-top navbar-default">
+				<div class="container"><!--container类用于约束内容的宽度，并使其在页面内居中-->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><!--nav-toggle类用于应用CSS样式--><!--data-toggle和data-target是Bootstrap的JS插件要用的，分别表示语气行为和预期目标-->
+							<span class="icon-bar"></span><!--icon-bar的span元素是CSS用来创建按钮中的四道杠用的-->
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="4.html" width="120">ZCX_WORK'</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="4.html"><span class="glyphicon glyphicon-home"></span>Home</a></li><!--默认第一个选项栏Home为点击状态，然后每次如果点击都会跳转到当前4页面-->
+							<li><a href="5.html"><span class="glyphicon glyphicon-picture"></span>Portfolio</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span>Team</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
+						</ul>
+					</div>	
+				</div>
+			</nav>
+		</header>
+		
+		<main role="main">
+			<!--<h1>主标题【Main Heading】</h1>
+			<p>特定于此页面的内容在此处。</p>-->
+			<div id="homepage-feature" class="carousel slide"><!--"homepage-feature"是一个带传送带的id属性，其carousel类用于吧Bootstrap的传送带应用到CSS应用到改元素上，为指示器、传送带空间添加样式-->
+				<ol class="carousel-indicators">
+					<li data-target="#homepage-feature" data-slide-to = "0" class="active"></li>
+					<li data-target="#homepage-feature" data-slide-to = "1"></li>
+					<li data-target="#homepage-feature" data-slide-to = "2"></li>
+					<li data-target="#homepage-feature" data-slide-to = "3"></li>
+				</ol>
+				
+				<!--幻灯片-->
+				<div class="carousel-inner"><!--carousel-inner元素内部是传送带项，是一组div标签-->
+					<div class="item active"><!--使其一开始可见-->
+						<img src="img/00.jpg" alt="00 Homepage"/>
+					</div>
+					<div class="item">
+						<img src="img/01.jpg" alt="01 Homepage"/>
+					</div>
+					<div class="item">
+						<img src="img/02.jpg" alt="02 Homepage"/>
+					</div>
+					<div class="item">
+						<img src="img/04.jpg" alt="03 Homepage"/>
+					</div>
+				</div><!--幻灯片图片区域结束-->
+				
+				<!--幻灯片两侧的控制按钮-->
+				<a class="left carousel-control" href="#homepage-feature" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#homepage-feature" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div><!--主页特征【homepage feature】的结束div-->
+			
+			<div class="page-contents container"><!--container类用于约束内容的宽度，使其在页面内居中-->
+            <div class="row"><!--row类用于包装三个栏，并为栏间流出左右外边距-->
+                <div class="col-sm-4"><!--因为Boostrap内置12栏网格系统，其中col-12支持全宽，col-6表示半宽，col-4表示三分之一宽，而col-sm-是小断点的写法-->
+                    <h2>欢迎!</h2>
+                    <p>欢迎浏览图片分享网站，本网站致力于分享高质量图片，用于丰富您的日常生活。</p>
+                    <p><a class="btn btn-primary pull-right" href="#">查看我们的产品组<span class="icon fa fa-arrow-circle-right"></span></a></p><!--btn类用于把链接编程按钮的样式，btn-primary类用于把按钮编程主品牌的颜色，pull-right类用于吧链接浮动到右侧，使其占据更大的空间，从而更便于发现和点击。-->
+                </div>
+                <div class="col-sm-4">
+                    <h2>最近更新</h2><!--最近更新的英文：Recent Updates-->
+                    <p>本网站最新上传了近百张高质量图片，同时也期待您的分享！点击右下角按钮查看最新的消息！</p>
+                    <p><a class="btn btn-primary pull-right" href="#">看看有什么新东西！ <span class="icon fa fa-arrow-circle-right"></span></a></p>
+                </div>
+                <div class="col-sm-4">
+                    <h2>我们的论坛</h2>
+                    <p>关注我们的论坛，每日获取最及时的网站咨询以及更多高质量图片分享！</p>
+                    <p><a class="btn btn-primary pull-right" href="#">进入论坛！ <span class="icon fa fa-arrow-circle-right"></span></a></p>
+                </div>
+            </div><!-- 下3格代码结束-->
+            </div><!-- container的div结束 -->
+		</main>
+		
+		<footer role="contentinfo"><!--contentinfo是内容信息，footer是页脚的内容-->
+
+            <ul class="social"><!--社交-->
+              <li><a href="#" title="Twitter Profile"><span class="icon fa fa-twitter"></span></a></li>
+              <li><a href="#" title="Facebook Page"><span class="icon fa fa-facebook"></span></a></li>
+              <li><a href="#" title="LinkedIn Profile"><span class="icon fa fa-linkedin"></span></a></li>
+              <li><a href="#" title="Google+ Profile"><span class="icon fa fa-google-plus"></span></a></li>
+              <li><a href="#" title="GitHub Profile"><span class="icon fa fa-github-alt"></span></a></li>
+            </ul>
+            
+			<p><small>Copyright &copy; Company Name</small></p>
+		</footer>
+	</body>
+</html>
+
+
+<!--	图片轮播功能连接到main.js-->
+<!--container类和row类都设定了清除，因而他们可以包含浮动元素，同时又清除之前的浮动元素-->
